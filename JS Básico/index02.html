@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <TITle>MANIPULANDO A DOM</TITle>
+    </head>
+    <body>
+        <div id="app">
+            <button onclick="mostrarAlerta()">ME PRESSIONE</button>
+            <button onmouseover="mostrarAlerta02()">PASSE POR AQUI</button>
+        </div>
+
+        Trabalhando com a DOM
+        <div id="app01">
+            <input type="text" name="nome"/>
+            <button class="botao">Adicionar</button>            
+        </div>
+    </body>
+    <script>
+        function mostrarAlerta(){
+            alert('BOTÃO FOI CLICADO');                        
+        }
+        function mostrarAlerta02(){
+            alert('MOUSE PASSOU POR CIMA');
+        }
+
+        //Trabalhando com a DOM  
+        var inputElement = document.querySelector('input[name=nome]');
+        var btnElement = document.querySelector('button.botao');
+
+        btnElement.onclick = function(){
+            var text = inputElement.value;
+            alert(text);
+        }
+    </script>
+
+</html>
